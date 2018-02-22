@@ -44,6 +44,13 @@ ModelImporter:
     100072: Cube_017
     100074: Cube_018
     100076: Cube_019
+    100078: Cube_020
+    100080: Cube_021
+    100082: Cube_022
+    100084: Cube_023
+    100086: Cube_024
+    100088: Cube_025
+    100090: Cube_026
     400000: //RootNode
     400002: Cube
     400004: NurbsCurve
@@ -83,8 +90,16 @@ ModelImporter:
     400072: Cube_017
     400074: Cube_018
     400076: Cube_019
+    400078: Cube_020
+    400080: Cube_021
+    400082: Cube_022
+    400084: Cube_023
+    400086: Cube_024
+    400088: Cube_025
+    400090: Cube_026
     2100000: Cinta_Base__cinta
     2100002: Cinta__cinta
+    2100004: unnamed
     2300000: //RootNode
     2300002: Cube
     2300004: NurbsCurve
@@ -107,6 +122,13 @@ ModelImporter:
     2300038: Cube_017
     2300040: Cube_018
     2300042: Cube_019
+    2300044: Cube_020
+    2300046: Cube_021
+    2300048: Cube_022
+    2300050: Cube_023
+    2300052: Cube_024
+    2300054: Cube_025
+    2300056: Cube_026
     3300000: //RootNode
     3300002: Cube
     3300004: NurbsCurve
@@ -129,6 +151,13 @@ ModelImporter:
     3300038: Cube_017
     3300040: Cube_018
     3300042: Cube_019
+    3300044: Cube_020
+    3300046: Cube_021
+    3300048: Cube_022
+    3300050: Cube_023
+    3300052: Cube_024
+    3300054: Cube_025
+    3300056: Cube_026
     4300000: Cube
     4300002: NurbsCurve
     4300004: Cube_006
@@ -150,6 +179,13 @@ ModelImporter:
     4300036: Cube_007
     4300038: Cube_019
     4300040: Cube_018
+    4300042: Cube_020
+    4300044: Cube_025
+    4300046: Cube_024
+    4300048: Cube_023
+    4300050: Cube_022
+    4300052: Cube_021
+    4300054: Cube_026
     7400000: Default Take
     9500000: //RootNode
   externalObjects:
@@ -188,7 +224,35 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      firstFrame: 0
+      lastFrame: 145
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -202,7 +266,7 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
+    optimizeMeshForGPU: 0
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
