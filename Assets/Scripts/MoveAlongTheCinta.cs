@@ -2,30 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
-
 public class MoveAlongTheCinta : MonoBehaviour {
 
+    public float velocity = 1f;
 
-    private Vector3[] vert;
-    public float velocity =0.1f;
+    private Vector3[] vert; //Vertices del objeto base
     private IDictionary<GameObject,int> objs= new Dictionary<GameObject, int>(); // Objeto y vertice actual
+
     // Use this for initialization
     void Start () {
         vert = GetComponent<MeshFilter>().mesh.vertices;
-        foreach(GameObject gm in GameObject.FindGameObjectsWithTag("Player"))
-                assingMe(gm); //Just to test
+        //Just to test
+        foreach (GameObject gm in GameObject.FindGameObjectsWithTag("Player"))
+                assingMe(gm);
+        //
     }
-	
-	// Update is called once per frame
-	void FixedUpdate () {
+
+    // Update is called once per fixed frame
+    void FixedUpdate () {
         velocity = Mathf.Abs(velocity);
         List<GameObject> toInc = new List<GameObject>();
         foreach (GameObject gm in objs.Keys) {
             Vector3 vertice = transform.TransformPoint(vert[objs[gm]]);
-            float distSqr = Vector3.Distance( gm.transform.position, vertice);
             gm.transform.position = Vector3.MoveTowards(gm.transform.position, vertice, velocity/100);
-            if (distSqr < 0.1f)
+            if (Vector3.Distance(gm.transform.position, vertice) < 0.1f)
             {
                 
                     toInc.Add(gm);
@@ -33,17 +33,13 @@ public class MoveAlongTheCinta : MonoBehaviour {
         }
         foreach(GameObject gm in toInc)
         {
-            if (objs[gm] >= vert.Length - 1)
-            {
-                objs[gm] = 0;
-            }
-            else
-                objs[gm]++;
-            Debug.Log(objs[gm]);
+            objs[gm] = objs[gm] >= vert.Length - 1 ? 0 : objs[gm] + 1;
         }
 
     }
 
+
+    //Asigna un objeto a la pila de objetos a mover
     public void assingMe(GameObject gm)
     {
         float minDistanceSqr = Mathf.Infinity;
