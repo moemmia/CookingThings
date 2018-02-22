@@ -14,7 +14,17 @@ ModelImporter:
     4300000: Cube
     7400000: Default Take
     9500000: //RootNode
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cinta_Base__cinta
+    second: {fileID: 2100000, guid: e5521eb4823ec4b4399d553d80bede32, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cinta__cinta
+    second: {fileID: 2100000, guid: 396ee347edb7f2142af529d5a7969e67, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
