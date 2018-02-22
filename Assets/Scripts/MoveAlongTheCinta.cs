@@ -13,7 +13,8 @@ public class MoveAlongTheCinta : MonoBehaviour {
     // Use this for initialization
     void Start () {
         vert = GetComponent<MeshFilter>().mesh.vertices;
-        assingMe(GameObject.FindGameObjectWithTag("Player"));
+        foreach(GameObject gm in GameObject.FindGameObjectsWithTag("Player"))
+                assingMe(gm); //Just to test
     }
 	
 	// Update is called once per frame
