@@ -296,6 +296,10 @@ Prefab:
       propertyPath: m_DynamicOccludee
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 23f54083ed761004fa3169035c320563, type: 3}
+      propertyPath: m_LocalScale.z
+      value: -1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 23f54083ed761004fa3169035c320563, type: 3}
   m_IsPrefabParent: 0
@@ -551,7 +555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2c80fe272dcc73498a5480705edbf12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: 0.02
+  velocity: 1
 --- !u!1001 &1606263156
 Prefab:
   m_ObjectHideFlags: 0
@@ -561,15 +565,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: d6c762595e42e4746b696f633630d5d8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.112
+      value: -6.917
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d6c762595e42e4746b696f633630d5d8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.172
+      value: 0.909
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d6c762595e42e4746b696f633630d5d8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.186
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d6c762595e42e4746b696f633630d5d8, type: 3}
       propertyPath: m_LocalRotation.x

@@ -8,7 +8,7 @@ public class MoveAlongTheCinta : MonoBehaviour {
 
 
     private Vector3[] vert;
-    public float velocity=0.1f;
+    public float velocity =0.1f;
     private IDictionary<GameObject,int> objs= new Dictionary<GameObject, int>(); // Objeto y vertice actual
     // Use this for initialization
     void Start () {
@@ -18,11 +18,12 @@ public class MoveAlongTheCinta : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+        velocity = Mathf.Abs(velocity);
         List<GameObject> toInc = new List<GameObject>();
         foreach (GameObject gm in objs.Keys) {
             Vector3 vertice = transform.TransformPoint(vert[objs[gm]]);
             float distSqr = Vector3.Distance( gm.transform.position, vertice);
-            gm.transform.position = Vector3.MoveTowards(gm.transform.position, vertice, velocity);
+            gm.transform.position = Vector3.MoveTowards(gm.transform.position, vertice, velocity/100);
             if (distSqr < 0.1f)
             {
                 
