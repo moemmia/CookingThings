@@ -12,10 +12,6 @@ public class MoveAlongTheCinta : MonoBehaviour {
     // Use this for initialization
     void Start () {
         vert = GetComponent<MeshFilter>().mesh.vertices;
-        //Just to test
-        foreach (GameObject gm in GameObject.FindGameObjectsWithTag("Player"))
-                assingMe(gm);
-        //
     }
 
     // Update is called once per fixed frame
@@ -42,6 +38,7 @@ public class MoveAlongTheCinta : MonoBehaviour {
     //Asigna un objeto a la pila de objetos a mover
     public void assingMe(GameObject gm)
     {
+        if (objs.ContainsKey(gm)) return;
         float minDistanceSqr = Mathf.Infinity;
         int nearestVertex = -1;
         for(int i=0; i< vert.Length; i++)
@@ -54,5 +51,10 @@ public class MoveAlongTheCinta : MonoBehaviour {
             }
         }
         objs.Add(gm, nearestVertex);
+    }
+
+    public void releaseMe(GameObject gm)
+    {
+        objs.Remove(gm);
     }
 }
