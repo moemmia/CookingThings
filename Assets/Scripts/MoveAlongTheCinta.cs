@@ -21,7 +21,7 @@ public class MoveAlongTheCinta : MonoBehaviour {
         foreach (GameObject gm in objs.Keys) {
             Vector3 vertice = transform.TransformPoint(vert[objs[gm]]);
             gm.transform.position = Vector3.MoveTowards(gm.transform.position, vertice, velocity/100);
-            if (Vector3.Distance(gm.transform.position, vertice) < 0.1f)
+            if (Vector3.Distance(gm.transform.position, vertice) < 0.1f+gm.GetComponent<MeshFilter>().mesh.bounds.extents.y)
             {
                 
                     toInc.Add(gm);
