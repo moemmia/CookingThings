@@ -117,11 +117,11 @@ ModelImporter:
       name: Default Take
       takeName: Default Take
       firstFrame: 0
-      lastFrame: 35
+      lastFrame: 38
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
-      cycleOffset: 1.14
+      cycleOffset: 0.1
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 0
@@ -140,7 +140,7 @@ ModelImporter:
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+      additiveReferencePoseFrame: 10
     - serializedVersion: 16
       name: Armature_004Action
       takeName: Armature_004Action
