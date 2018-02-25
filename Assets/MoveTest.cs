@@ -13,7 +13,7 @@ public class MoveTest : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-                Vector3 moveDirection = (this.transform.forward * Input.GetAxis("Vertical") * 0.1f + this.transform.right * Input.GetAxis("Horizontal") * 0.1f);
+                Vector3 moveDirection = (this.transform.forward * Input.GetAxis("Vertical")  + this.transform.right * Input.GetAxis("Horizontal")).normalized * 0.08f;
                 this.GetComponent<CharacterController>().Move(moveDirection);
         if (!moveDirection.Equals(Vector3.zero))
         {
