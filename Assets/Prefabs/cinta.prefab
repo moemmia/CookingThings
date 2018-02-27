@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23727773545871914}
   - component: {fileID: 64336196083247168}
   - component: {fileID: 114404289468916760}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cinta_Int
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 33014800384077940}
   - component: {fileID: 23188100686870410}
   - component: {fileID: 64655044744216700}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cinta_Ext
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 33617627495884110}
   - component: {fileID: 23404103686906518}
   - component: {fileID: 114615825736253506}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: NurbsCurve
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75,7 +75,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4422452039279868}
   - component: {fileID: 95349671178558942}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: cinta
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 54013233343056774}
   - component: {fileID: 65036558891309412}
   - component: {fileID: 59895219088211942}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Bone_003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4736581509784024}
   - component: {fileID: 54976251284441162}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Armature_003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 54127865189213050}
   - component: {fileID: 65322105173445764}
   - component: {fileID: 59474589197829174}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Bone_002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4430080523631916}
   - component: {fileID: 54307243771729692}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Armature_003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 54781851938221758}
   - component: {fileID: 65965550702637456}
   - component: {fileID: 59297223612464638}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Bone_002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 33288286528260238}
   - component: {fileID: 23668153393551714}
   - component: {fileID: 95221631829432970}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: cinta_pared
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 4414940206147550}
   - component: {fileID: 33360920620500296}
   - component: {fileID: 23020043561005200}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -141,7 +141,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4518430194913862}
   - component: {fileID: 137577676942838642}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube_004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -157,7 +157,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4306837309907650}
   - component: {fileID: 95449544647119580}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: falda_D (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -175,7 +175,7 @@ GameObject:
   - component: {fileID: 54595616571491252}
   - component: {fileID: 65875493546866714}
   - component: {fileID: 59597267745798076}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Bone_004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -193,7 +193,7 @@ GameObject:
   - component: {fileID: 54451544491144266}
   - component: {fileID: 65924719832553602}
   - component: {fileID: 59154552945303086}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Bone_004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -209,7 +209,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4605434739596136}
   - component: {fileID: 95709065510227496}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: falda_I
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -225,7 +225,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4111037337933012}
   - component: {fileID: 95749742069045454}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: falda_I (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -243,7 +243,7 @@ GameObject:
   - component: {fileID: 54952884470109226}
   - component: {fileID: 65184690790164114}
   - component: {fileID: 59738008882744744}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Bone_004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -259,7 +259,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4166801086436554}
   - component: {fileID: 95867359424247002}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: falda_D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -277,7 +277,7 @@ GameObject:
   - component: {fileID: 54591737928590322}
   - component: {fileID: 65410363635305176}
   - component: {fileID: 59478001072215392}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Bone_003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -295,7 +295,7 @@ GameObject:
   - component: {fileID: 54992981141798206}
   - component: {fileID: 65902328710331032}
   - component: {fileID: 59638338825219216}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Bone_002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -313,7 +313,7 @@ GameObject:
   - component: {fileID: 33930301501998290}
   - component: {fileID: 64422921165412024}
   - component: {fileID: 23297335102084494}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -329,7 +329,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4906792172360536}
   - component: {fileID: 137884045139297710}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube_004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -345,7 +345,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4853226470039352}
   - component: {fileID: 54831035706660238}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Armature_003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -362,7 +362,7 @@ GameObject:
   - component: {fileID: 4316503845099124}
   - component: {fileID: 33379818264099984}
   - component: {fileID: 23002919790093228}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -380,7 +380,7 @@ GameObject:
   - component: {fileID: 54339368613446686}
   - component: {fileID: 65228303309712396}
   - component: {fileID: 59203811846269242}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Bone_002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -398,7 +398,7 @@ GameObject:
   - component: {fileID: 54997562752532446}
   - component: {fileID: 65058859149108714}
   - component: {fileID: 59082532482598618}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Bone_003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -416,7 +416,7 @@ GameObject:
   - component: {fileID: 33791597082847140}
   - component: {fileID: 64991216362114178}
   - component: {fileID: 23993728391914502}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Plane (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -434,7 +434,7 @@ GameObject:
   - component: {fileID: 54889858805460724}
   - component: {fileID: 65316483014226788}
   - component: {fileID: 59910332069363496}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Bone_004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -452,7 +452,7 @@ GameObject:
   - component: {fileID: 54833600589490792}
   - component: {fileID: 65596061504779434}
   - component: {fileID: 59148152302936750}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Bone_003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -467,7 +467,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4053259388978878}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Pared_cinta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -483,7 +483,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4189324152005084}
   - component: {fileID: 137098607869028836}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube_004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -499,7 +499,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4350429725067368}
   - component: {fileID: 137982500798622986}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube_004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -515,7 +515,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4053373202304566}
   - component: {fileID: 54707204779263156}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Armature_003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -532,7 +532,7 @@ GameObject:
   - component: {fileID: 4912737345987948}
   - component: {fileID: 33243923260277794}
   - component: {fileID: 23345645105537870}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -549,7 +549,7 @@ GameObject:
   - component: {fileID: 4285614442361138}
   - component: {fileID: 33721062566549074}
   - component: {fileID: 23872170276806580}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
