@@ -18,21 +18,13 @@ public class CogerCosas : MonoBehaviour {
 	void LateUpdate() {
        // Ray ray = new Ray(transform.position+Vector3.up, Vector3.down);
        // Physics.SphereCast(ray,1f, out hit);
-        hits=Physics.SphereCastAll(transform.position + Vector3.up,  1f, Vector3.down);
+        hits=Physics.SphereCastAll(GetComponentInParent<Transform>().position + Vector3.up,  1f, Vector3.down);
         //Physics.Raycast(transform.position, Vector3.down, out hit); 
         if (Input.GetKeyDown(KeyCode.E)) //No Haardcodear por favor, arreglalo cunado todo funcione
         {
             if (attached == null)
             {
-                RaycastHit hit = new RaycastHit();
-                foreach (RaycastHit h in hits)
-                {
-                    if (hit.transform == null) hit = h;
-                    else if (h.transform.tag.Equals("obj") && hit.distance>h.distance)
-                    {
-                        hit = h;
-                    }
-                }
+                hit = closestHit(hits);
                 if (hit.transform!=null && hit.transform.tag.Equals("obj"))
                 {
                     attached = hit.transform.gameObject;
@@ -52,21 +44,32 @@ public class CogerCosas : MonoBehaviour {
                     c.enabled = true;
                 } 
                 attached = null;
-
             }
-        }
-        else
+        }else if (attached == null)
         {
-            if (attached == null && hit.transform != null && hit.transform.tag.Equals("obj"))
+                hit = closestHit(hits);
+                if(hit.transform != null && hit.transform.tag.Equals("obj"))
                 {
                     //dar una indicación visual de que se puede interactuar con el objeto.
-                }
-        }
-        if (attached != null)
+                }             
+        }else
         {
             attached.transform.position = this.transform.position;
 
         }
+    }
 
+    private RaycastHit closestHit(RaycastHit[] hits)
+    {
+        RaycastHit hit = new RaycastHit();
+        foreach (RaycastHit h in hits)
+        {
+            if (hit.transform == null) hit = h;
+            else if (h.transform.tag.Equals("obj") && hit.distance > h.distance)
+            {
+                hit = h;
+            }
+        }
+        return hit;
     }
 }
