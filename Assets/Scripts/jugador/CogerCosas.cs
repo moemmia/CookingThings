@@ -6,6 +6,7 @@ public class CogerCosas : MonoBehaviour {
 
     GameObject attached;
     RaycastHit hit=new RaycastHit();
+    RaycastHit[] hits;
     public float radius;
 
     // Use this for initialization
@@ -15,13 +16,23 @@ public class CogerCosas : MonoBehaviour {
 	
 	// Update is called once per frame
 	void LateUpdate() {
-        Ray ray = new Ray(transform.position+Vector3.up, Vector3.down);
-        Physics.SphereCast(ray,1f, out hit);
-       //Physics.Raycast(transform.position, Vector3.down, out hit); 
+       // Ray ray = new Ray(transform.position+Vector3.up, Vector3.down);
+       // Physics.SphereCast(ray,1f, out hit);
+        hits=Physics.SphereCastAll(transform.position + Vector3.up,  1f, Vector3.down);
+        //Physics.Raycast(transform.position, Vector3.down, out hit); 
         if (Input.GetKeyDown(KeyCode.E)) //No Haardcodear por favor, arreglalo cunado todo funcione
         {
             if (attached == null)
             {
+                RaycastHit hit = new RaycastHit();
+                foreach (RaycastHit h in hits)
+                {
+                    if (hit.transform == null) hit = h;
+                    else if (h.transform.tag.Equals("obj") && hit.distance>h.distance)
+                    {
+                        hit = h;
+                    }
+                }
                 if (hit.transform!=null && hit.transform.tag.Equals("obj"))
                 {
                     attached = hit.transform.gameObject;
