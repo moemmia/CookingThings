@@ -6,7 +6,6 @@ Shader "Custom/VertexLit ShowThrough" {
 	Properties{
 		_Color("Color", Color) = (1,1,1,1)
 		_MainTex("Albedo (RGB)", 2D) = "white" {}
-		_OutLineTex("Albedo (RGB)", 2D) = "white" {}
 		_OccludeColor("Occlusion Color", Color) = (0,0,1,1)
 		_iColor("Inside Color", Color) = (0,0,1,1)
 		_Thickness("Thickness", float) = 4
@@ -118,22 +117,21 @@ Shader "Custom/VertexLit ShowThrough" {
 					ZWrite Off
 					Blend One Zero
 					ZTest Greater
-				
 					Color[_iColor]
+					
 			}
 
 
 				// Vertex lights
 				Pass{
+
 				Tags{ "LightMode" = "Vertex" }
 				ZWrite On
 				Lighting On
-				Cull off
 				Material{
-					Diffuse[_Color]
+					
 					Ambient[_Color]
-				// Emission [_PPLAmbient]
-			}
+				}
 			SetTexture[_MainTex]{
 				ConstantColor[_Color]
 				Combine texture * primary DOUBLE, texture * constant
