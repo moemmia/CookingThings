@@ -10,7 +10,7 @@ Material:
   m_Shader: {fileID: 4800000, guid: d0f3b2ac1a6a20a4fb5ce3eeaeeadf29, type: 3}
   m_ShaderKeywords: ETC1_EXTERNAL_ALPHA _GLOSSYREFLECTIONS_OFF
   m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
+  m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -74,10 +74,12 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
+    - _Thickness: 2
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 0.4044118, g: 0.4044118, b: 0.4044118, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
-    - _OccludeColor: {r: 0.21323532, g: 0.21323532, b: 0.21323532, a: 1}
+    - _OccludeColor: {r: 0.4852941, g: 0.4852941, b: 0.4852941, a: 1}
     - _OutlineColor: {r: 1, g: 1, b: 1, a: 1}
+    - _iColor: {r: 0, g: 0, b: 0, a: 1}
