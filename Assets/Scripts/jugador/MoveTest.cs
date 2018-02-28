@@ -6,6 +6,7 @@ public class MoveTest : MonoBehaviour {
 
    public GameObject person;
    CharacterController controller;
+    bool running;
     public float velocity;
     // Use this for initialization
     void Start () {
@@ -15,8 +16,10 @@ public class MoveTest : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-       
-            Vector3 moveDirection = (this.transform.forward * Input.GetAxis("Vertical") + this.transform.right * Input.GetAxis("Horizontal")).normalized * velocity;
+        if (Input.GetKey(KeyCode.LeftShift)) faster();
+        else slower();
+        if (running) velocity *= 2;
+             Vector3 moveDirection = (this.transform.forward * Input.GetAxis("Vertical") + this.transform.right * Input.GetAxis("Horizontal")).normalized * velocity;
             controller.Move(moveDirection * Time.deltaTime);
             if (!moveDirection.Equals(Vector3.zero))
             {
@@ -30,6 +33,19 @@ public class MoveTest : MonoBehaviour {
         {
             controller.Move(Vector3.down*10 * Time.deltaTime);
         }
-
+        if (running) velocity /= 2;
     }
+
+    private void faster()
+    {
+        running = true;
+        person.GetComponent<Animator>().SetFloat("vel", 2f);
+    }
+
+    private void slower()
+    {
+        running = false;
+        person.GetComponent<Animator>().SetFloat("vel", 1f);
+    }
+   
 }
