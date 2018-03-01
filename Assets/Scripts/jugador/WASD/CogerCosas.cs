@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CogerCosas : MonoBehaviour {
-
+    public GameObject person;
     GameObject attached;
     RaycastHit hit=new RaycastHit();
     RaycastHit[] hits;
@@ -29,7 +29,7 @@ public class CogerCosas : MonoBehaviour {
                 {
                     attached = hit.transform.gameObject;
                     GameObject.FindGameObjectWithTag("seguidor").GetComponent<MoveAlongTheCinta>().releaseMe(attached);
-                    this.GetComponent<testBrazos>().enabled = true;
+                    person.GetComponent<Animator>().SetBool("carrying", true);
                     attached.GetComponent<Rigidbody>().isKinematic = true;
                     foreach (Collider c in hit.transform.GetComponents<Collider>())
                         c.enabled = false;
@@ -37,7 +37,7 @@ public class CogerCosas : MonoBehaviour {
             }
             else
             {
-                this.GetComponent<testBrazos>().enabled = false;
+                person.GetComponent<Animator>().SetBool("carrying", false);
                 attached.GetComponent<Rigidbody>().isKinematic = false;
                 foreach (Collider c in attached.GetComponents<Collider>())
                 {
