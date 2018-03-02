@@ -124,18 +124,18 @@ Shader "Custom/VertexLit ShowThrough" {
 
 				// Vertex lights
 				Pass{
-
-				Tags{ "LightMode" = "Vertex" }
+					
 				ZWrite On
 				Lighting On
 				Material{
-					
+					Diffuse[_Color]
 					Ambient[_Color]
 				}
 			SetTexture[_MainTex]{
 				ConstantColor[_Color]
 				Combine texture * primary DOUBLE, texture * constant
 			}
+
 		}
 		}
 			FallBack "Diffuse", 1
