@@ -1,14 +1,19 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Mouse_Move : MonoBehaviour {
+public class PlayerController : MonoBehaviour {
     NavMeshAgent agent;
     public GameObject animator;
     public GameObject showWere;
     private float lastClickTime;
     private float catchTime = 0.3f;
+    public Action onArrive;
+    public GameObject attached;
+    public bool carrying;
+    public GameObject basemover;
     // Use this for initialization
     void Start() {
         agent = GetComponent<NavMeshAgent>();
@@ -26,7 +31,7 @@ public class Mouse_Move : MonoBehaviour {
                 MoveTo(hit.point);
             }
             lastClickTime = Time.time;
-
+            onArrive = null;
         }
         if (Input.GetButtonDown("Mouse1"))
         {
@@ -36,6 +41,7 @@ public class Mouse_Move : MonoBehaviour {
             {
                 try
                 {
+                    Debug.Log(hit.transform.name);
                     hit.transform.GetComponent<ListOfActions>().show();
                 }
                 catch{}
@@ -43,6 +49,7 @@ public class Mouse_Move : MonoBehaviour {
             }
         }
         ContinueMove();
+        Carrying();
     }
 
     public void MoveTo(Vector3 position)
@@ -76,6 +83,32 @@ public class Mouse_Move : MonoBehaviour {
             if (animator.GetComponent<Animator>().GetBool("walking"))
                 animator.GetComponent<Animator>().SetBool("walking", false);
             showWere.SetActive(false);
+            if (onArrive != null)
+            {
+                onArrive();
+            }
+        }
+    }
+
+    private void Carrying()
+    {
+        if (carrying && attached != null)
+        {
+            attached.GetComponent<Rigidbody>().isKinematic = true;
+            attached.GetComponent<NavMeshObstacle>().enabled = false;
+            foreach (Collider c in attached.transform.GetComponents<Collider>())
+                c.enabled = false;
+            attached.transform.position = basemover.transform.position;
+            animator.GetComponent<Animator>().SetBool("carrying", true);
+        }
+        else if(!carrying && attached != null)
+        {
+            attached.GetComponent<Rigidbody>().isKinematic = false;
+            attached.GetComponent<NavMeshObstacle>().enabled = true;
+            foreach (Collider c in attached.transform.GetComponents<Collider>())
+                c.enabled = true;
+            animator.GetComponent<Animator>().SetBool("carrying", false);
+            attached = null;
         }
     }
 

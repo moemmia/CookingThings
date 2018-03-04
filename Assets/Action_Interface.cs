@@ -1,4 +1,6 @@
-﻿public interface Action_Interface
+﻿using System.Collections;
+
+public interface Action_Interface
 {
-    void Do();
+    IEnumerator Do();
 }
