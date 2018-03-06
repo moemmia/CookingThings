@@ -24,7 +24,7 @@ public class AttachOnTouch : MonoBehaviour {
 
     void OnCollisionExit(Collision other)
     {
-        //mov.releaseMe(other.gameObject);
+        mov.releaseMe(other.gameObject);
     }
     
 }

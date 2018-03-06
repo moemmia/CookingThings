@@ -14,7 +14,10 @@ public class Soltar : MonoBehaviour, Action_Interface
 
     public IEnumerator Do()
     {
-        player.MoveTo(this.transform.position);
+
+        RaycastHit hit = new RaycastHit();
+        Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 100);
+        player.MoveTo(hit.point);
         yield return new WaitForEndOfFrame();
         player.onArrive = Accion;
     }

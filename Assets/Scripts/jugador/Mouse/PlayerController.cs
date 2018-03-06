@@ -86,7 +86,10 @@ public class PlayerController : MonoBehaviour {
             if (onArrive != null)
             {
                 onArrive();
+                agent.destination = agent.transform.position;
+                onArrive = null;
             }
+            
         }
     }
 
