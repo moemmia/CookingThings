@@ -41,7 +41,6 @@ public class PlayerController : MonoBehaviour {
             {
                 try
                 {
-                    Debug.Log(hit.transform.name);
                     hit.transform.GetComponent<ListOfActions>().show();
                 }
                 catch{}
@@ -71,7 +70,7 @@ public class PlayerController : MonoBehaviour {
 
     private void ContinueMove()
     {
-        if (agent.hasPath && agent.remainingDistance > float.Epsilon)
+        if (agent.hasPath && agent.remainingDistance > 0.2f)
         {
             if (!animator.GetComponent<Animator>().GetBool("walking"))
                 animator.GetComponent<Animator>().SetBool("walking", true);
@@ -97,11 +96,12 @@ public class PlayerController : MonoBehaviour {
     {
         if (carrying && attached != null)
         {
+            GameObject.FindGameObjectWithTag("seguidor").GetComponent<MoveAlongTheCinta>().releaseMe(attached);
+            attached.transform.position = basemover.transform.position;
             attached.GetComponent<Rigidbody>().isKinematic = true;
             attached.GetComponent<NavMeshObstacle>().enabled = false;
             foreach (Collider c in attached.transform.GetComponents<Collider>())
                 c.enabled = false;
-            attached.transform.position = basemover.transform.position;
             animator.GetComponent<Animator>().SetBool("carrying", true);
         }
         else if(!carrying && attached != null)

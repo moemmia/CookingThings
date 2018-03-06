@@ -6,7 +6,7 @@ public class Soltar : MonoBehaviour, Action_Interface
 {
 
     PlayerController player;
-
+    RaycastHit hit;
     public void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
@@ -15,7 +15,7 @@ public class Soltar : MonoBehaviour, Action_Interface
     public IEnumerator Do()
     {
 
-        RaycastHit hit = new RaycastHit();
+        hit = new RaycastHit();
         Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 100);
         player.MoveTo(hit.point);
         yield return new WaitForEndOfFrame();
@@ -24,6 +24,7 @@ public class Soltar : MonoBehaviour, Action_Interface
 
     public void Accion()
     {
+        player.transform.LookAt(hit.transform.position);
         player.carrying = false;
     }
 }
